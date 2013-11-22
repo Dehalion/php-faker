@@ -1,9 +1,6 @@
 <?php
 
-if (count(spl_autoload_functions()) <= 0) 
-{
-  require_once dirname(__FILE__) . '/autoload.php';
-}
+require_once dirname(__FILE__) . '/autoload.php';
 
 final class Faker
 {
@@ -54,7 +51,7 @@ final class Faker
   {
     return self::$phone ? self::$phone : self::$phone = new fkPhoneNumber();
   }
-  
+
   private static $date;
 
   public static function date ()
